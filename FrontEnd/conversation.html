@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athena AI</title>
+    <link rel="stylesheet" href="css/conversation.css">
+</head>
+<body>
+    <div class="head">
+        <div class="logo">
+        <img src="image/logo_athena.PNG" id="athena">
+        </div>
+        <div class="titre">
+        <h1>Athena</h1>
+        </div>
+        <div class="slogan">
+        <h2>La déesse de la sagesse répond à tes questions</h2>
+        </div>
+        <div class="button_connexion">
+        <button class="btn-connex"> Connexion </button>
+        <button class="btn-connex">Deconnexion</button>
+        </div>
+    </div>
+    <div class="body-centre">
+        <div class="history">
+            <h3>Historique</h3>
+        <span class="date-requete"> Aujourd'hui</span></br>
+        <span> Sujet: programmation </span></br>
+        <span class="date-requete"> Hier</span></br>
+        <span> Sujet: animaux</span>
+        </div>
+        <div class="chat-container">
+            <h3> Quel est votre question ?</h3>
+        <div class="chat-box" id="chat-box">
+        <div class="chat-input">
+            <textarea  id="requete" placeholder="Posez vos questions..."></textarea>
+            <button onclick="sendMessage()">Envoyer</button>
+        </div>
+    </div>
+    <img src="image/olivier.PNG" alt="arbre olivier" id="arbre">
+    </div>
+</body>
+</html>
