@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Athena AI</title>
     <link rel="stylesheet" href="css/conversation.css">
+    <script src="js/conversation.js" defer></script>
 </head>
 <body>
     <div class="head">
@@ -35,7 +36,10 @@
         <div class="chat-box" id="chat-box">
         <div class="chat-input">
             <textarea  id="requete" placeholder="Posez vos questions..."></textarea>
-            <button onclick="sendMessage()">Envoyer</button>
+            <button id="buttonSendRequete">Envoyer</button>
+        </div>
+        <div>
+            <p id="response"></p>
         </div>
     </div>
     <img src="image/olivier.PNG" alt="arbre olivier" id="arbre">
