@@ -1,7 +1,9 @@
+// script pour appeler l'API Hugging Face
+
 require("dotenv").config();
 
 async function callHuggingFace(question) {
-  const MODEL = "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B";
+  const MODEL = "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B"; // le nom du model à utiliser
 
   const res = await fetch(`https://api-inference.huggingface.co/models/${MODEL}`, {
     method: "POST",

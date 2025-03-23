@@ -1,8 +1,12 @@
-const { handleAsk } = require("../controllers/chat.controller");
+const { handleAsk,handleHistory } = require("../controllers/chat.controller");
 
 function router(req, res) {
   if (req.url === "/ask" && req.method === "POST") {
     return handleAsk(req, res);
+  }
+
+  if (req.url === "/history" && req.method === "GET") {
+    return handleHistory(req, res);
   }
 
   // OPTIONS pour CORS

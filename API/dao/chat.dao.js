@@ -15,4 +15,17 @@ async function insertRequete(id_response, text) {
   );
 }
 
-module.exports = { insertResponse, insertRequete };
+async function getLastConversations(limit = 10) {
+  const [rows] = await pool.query(
+    `SELECT r.text_requete, s.text_response
+     FROM requetes r
+     JOIN response s ON r.id_response = s.id
+     ORDER BY r.date_requete DESC
+     LIMIT ?`,
+    [limit]
+  );
+  return rows;
+}
+
+module.exports = { insertResponse, insertRequete, getLastConversations, };
+
